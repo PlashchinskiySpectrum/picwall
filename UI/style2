@@ -3,20 +3,29 @@ body {
     color: #000000;
     font-family: Trebuchet MS, Arial, Times New Roman;
     font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    box-sizing: border-box;
 }
 
 #container {
-    max-width:1500px;
-    height: 7000px;
-    background: #FFFFFF;
     margin: 0 auto;
+    padding: 0;
+    /*max-width:1500px;*/
+    /*height: 7000px;*/
+    background: #FFFFFF;
+    overflow: hidden;
 }
 
 #header {
     font-family: Century Gothic;
     background: #00a88e;
     height: 87px; 
-    width: 1500px;
+    /*width: 1500px;*/
+    margin: 0 auto;
 }
 
 .item{
@@ -60,9 +69,9 @@ body {
 #content {
     text-align: center;
     background: linear-gradient(180deg, #000000, #ffffff);
-    float: left;
-    width: 1500px;
-    height:7000px;
+    margin: 0 auto;
+    /*width: 1500px;*/
+    overflow: hidden;
 }
 
 #like{
