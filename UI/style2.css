@@ -1,0 +1,267 @@
+body {
+    background: #f3f2f3;
+    color: #000000;
+    font-family: Trebuchet MS, Arial, Times New Roman;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+#container {
+    margin: 0 auto;
+    padding: 0;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+#header {
+    font-family: Century Gothic;
+    background: #00a88e;
+    height: 87px;
+    margin: 0 auto;
+}
+
+.plus{
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    margin-top: -69px;
+}
+
+.info{
+    margin: 0 auto;
+    display: block;
+    font-size: 15px;
+    text-align: right;
+    margin-top: -75px;
+    margin-right: 200px;
+}
+
+.profile{
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    text-align: right;
+    margin-right: 120px;
+    margin-top: -80px;
+}
+
+.krest{
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: -69px;
+}
+
+
+.filterText{
+    font-family: Century Gothic;
+    float: left;
+    width: 800px;
+    overflow: hidden;
+}
+
+.filterText a{
+    font-family: Century Gothic;
+    float: left;
+    margin-left: 370px;
+    margin-top: 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+.filter {
+    font-family: Century Gothic;
+    margin:  0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #00a88e;
+    width: 800px;
+    height: 140px;
+}
+
+.choice input{
+    font-family: Century Gothic;
+    margin-left: 25px;
+    border:  0;
+    outline: 0;
+    background-color: #ffffff;
+    font-size: 18px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.choice button{
+    font-family: Century Gothic;
+    margin-left: 20px;
+    margin-top: 15px;
+    border:  0;
+    outline: 0;
+    background-color: #A9A9A9;
+    font-size: 14px;
+    padding: 9.5px 8.5px 6.2px 8.5px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#content {
+    text-align: center;
+    background: linear-gradient(180deg, #000000, #ffffff);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.udalit{
+    cursor: pointer;
+    float: right;
+}
+
+.redact{
+    cursor: pointer;
+    float: right;
+    margin-top: -5px;
+
+}
+
+.post {
+    font-family: Century Gothic;
+    margin:  0 auto;
+    margin-top: 20px;
+    background-color: #ffffff;
+    width: 800px;
+    overflow: hidden;
+}
+
+.profilePhoto{
+    cursor: pointer;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.post a1
+{
+    font-weight: bold;
+    float: left;
+    margin-top: 25px;
+    margin-left:  10px;
+    font-size:  20px;
+}
+
+.post a2{
+    float: right;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+.post a3{
+    float: right;
+    margin-right: 10px;
+    margin-top: 14px;
+    }
+
+.photo{
+    float: left;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.like{
+    float:left;
+    margin-top: 10px;
+    margin-left: 375px;
+    height: 45px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.post ul{
+    margin-top: 10px;
+    float: right;
+}
+
+.post li{
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    list-style-type: none;
+
+}
+
+.delete{
+    margin-top: 6px;
+}
+
+.redact{
+    margin-top: -1px;
+}
+
+.tags a{
+    float: left;
+    margin-left: 30px; 
+    font-size: 20px;
+}
+
+.tags{
+    margin:  0 auto;
+    float: left;
+    height: 25px;
+    width:  700px;
+    background-color: #fff;
+}
+
+.tagsArea{
+    margin:  0 auto;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    width:  640px;
+    background-color: #e2dfde;
+    margin-bottom: 20px;
+}
+
+.tagsArea a{
+    float: left;
+    margin-left: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#eshce{
+    
+}
+#clear {
+    clear:both;
+}
+
+#footer {
+    margin:  0 auto;
+    background: #ffffff;
+    height: 81px;
+    font-family: Century Gothic;
+}
+
+#left{
+    display:inline-block;
+    text-align:left;
+    width: 33%;
+}   
+#center{
+    display:inline-block;
+    text-align:center;
+    width: 33%;
+}  
+#right{
+    display:inline-block;
+    text-align:right;
+    width: 33%;
+}

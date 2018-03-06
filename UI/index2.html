@@ -4,149 +4,382 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>picwall2</title>
-    <link href="style2" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
 </head>
 <body>
     <div id="container">
+
+
     	<div id="header">
-    		<div class="item">
-    			<img src = "C:\WORK\Проги\4 семестр\УП\UI\logo.png" height="75" width="250" alt="logo">
-    		</div>
-            <div class="item">
-    			<img src = "C:\WORK\Проги\4 семестр\УП\UI\plus.png" hight = "70" width = "70" alt = "plus" id="plus">
-            </div>
-            <div class="item" id="info">
+    		<img src = "logo.png" height="75" width="250" alt="logo" class="logo">
+    		<img src = "plus.png" hight = "70" width = "70" alt = "plus" class="plus">
+            <div class="info">
                 <p><b>Егор Плащинский</b></p>
                 <p><b>@plashchinskiy.spectrum</b></p>
             </div>
-    		<div class="item">
-    			<img src = "C:\WORK\Проги\4 семестр\УП\UI\profile.png" hight = "70" width = "70" alt = "profile" id="profile">
-    		</div>
-    		<div class="item">
-    			<img src = "C:\WORK\Проги\4 семестр\УП\UI\krest.png" hight = "70" width = "70" alt = "krest" id="krest">
-    		</div>
+    		<img src = "profile.png" hight = "70" width = "70" alt = "profile" class="profile">
+    		<img src = "krest.png" hight = "70" width = "70" alt = "krest" class="krest">
     	</div>
-    	<div id="search">
-    		<div style="position:relative;left:680px; top:10">
-    			<form>
-    				<input type="text" id="field-search" placeholder="Введите фильтр...">
-    			</form>
-    		</div>
-    	</div>
-    	<div id="content">
-            <div id="post1">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post1.png" hight = "800" width = "800" alt = "post1">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
-            </div>
-
-            <div id="post2">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post2.png" hight = "800" width = "800" alt = "post2">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
-            </div>
-            <div id="udalit">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\udalit.png" hight = "25" width = "25" alt = "udalit">
-            </div>
-            <div id="redact">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\redact.png" hight = "35" width = "35" alt = "redact">
-            </div>
-            <div id="clear">
-            </div>
-            
-            <div id="post3">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post3.png" hight = "800" width = "800" alt = "post3">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
-            </div>
 
 
-            <div id="post4">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post4.png" hight = "800" width = "800" alt = "post4">
+
+        <div id="content">
+        <section>
+            <div class="filter">
+                <div class="filterText">
+                    <a>Фильтр:</a>
+                </div>
+
+                <div class="choice">
+                    <form>
+                    
+                        <input type="text" size="10" placeholder="от дд.мм.гггг">
+                        <input type="text" size="10" placeholder="до дд.мм.гггг" >  
+                        <input type="text" size="10" placeholder="ник автора" >
+                        <input type="text" size="10" placeholder="#хэштег">
+                    </form>
+
+                    <button type="submit">Применить</button>
+                </div>
             </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+        </section>
+
+        <section>
+        <div class="post">
+
+            <img src="profile1.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>progressive_mdk</a1>
+            <a2>05.03.2018</a2>
+            <a3>1:27</a3>
+
+            <img src="post1.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
             </div>
 
-            <div id="post5">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post5.png" hight = "800" width = "800" alt = "post5">
+            <div class="tagsArea">
+                <a>#Progressive #Bear</a>
             </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
-            </div>
-
-            <div id="post6">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post6.png" hight = "800" width = "800" alt = "post6">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+            <div class="tags">
+                <a>Описание:</a>
             </div>
 
-            <div id="post7">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post7.png" hight = "800" width = "800" alt = "post7">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+            <div class="tagsArea">
+                <a> Самый прогрессивный медведь!</a>
             </div>
 
-            <div id="post8">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post8.png" hight = "800" width = "800" alt = "post8">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile2.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>plashchinskiy.spectrum</a1>
+            <a2>04.03.2018</a2>
+            <a3>20:31</a3>
+
+            <img src="post2.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <ul>
+                <li class="delete">
+                    <img src="udalit.png" alt="picwall" width="42" height="42">
+                </li>
+                <li class="redact">
+                    <img src="redact.png" alt="picwall" width="60" height="60">
+                </li>
+            </ul>
+
+            <div class="tags">
+                <a>#Tags:</a>
             </div>
 
-            <div id="post9">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post9.png" hight = "800" width = "800" alt = "post9">
+            <div class="tagsArea">
+                <a>#spherespectrum #progressive #metalcore #symphonic #deathcore</a>
             </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
-            </div>
-
-            <div id="post10">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post10.png" hight = "800" width = "800" alt = "post10">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+            <div class="tags">
+                <a>Описание:</a>
             </div>
 
-            <div id="post4">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\post4.png" hight = "800" width = "800" alt = "post4">
-            </div>
-            <div id="like">
-                <img src = "C:\WORK\Проги\4 семестр\УП\UI\like.png" hight = "25" width = "25" alt = "like">
+            <div class="tagsArea">
+                <a>Как высоко мы сможем взлететь?</a>
             </div>
 
-    		<div id="esche">
-    			<img src = "C:\WORK\Проги\4 семестр\УП\UI\esche.png" hight = "100" width = "250" alt = "esche">
-    		</div>
-    	</div>
-    	<div id="clear">
-    	</div>
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile3.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>kak_tut_jit'</a1>
+            <a2>03.03.2018</a2>
+            <a3>20:20</a3>
+
+            <img src="post3.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#zoo #forfree #cat</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a> 11.03.2018 в зоопарк бесплатно пустят всех желающих!</a>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile4.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>pacras_lampas</a1>
+            <a2>02.03.2018</a2>
+            <a3>20:11</a3>
+
+            <img src="post4.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#art #building</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a> Как вам моё новое творение?</a>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile5.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>belarussian_underground_cene</a1>
+            <a2>01.03.2018</a2>
+            <a3>18:31</a3>
+
+            <img src="post5.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#post_rock #alt_rock</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>Эти ребята снова радуют нас своими релизами!</a>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile6.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>sphere.spectrum.official</a1>
+            <a2>28.02.2018</a2>
+            <a3>19:18</a3>
+
+            <img src="post6.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#symphonic #deathcore #progressive #metalcore #djent #spherespectrum</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>New single Flying High is already available for listening!</a>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile7.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>citydog</a1>
+            <a2>27.02.2018</a2>
+            <a3>15:45</a3>
+
+            <img src="post7.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#cold #minsk</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>Большие морозы! Открыты мини-медпункты.</a>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile8.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>gastro_fest_minsk</a1>
+            <a2>26.02.2018</a2>
+            <a3>11:11</a3>
+
+            <img src="post8.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#gastrofest #minsk #food #taste</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>Недяля гастрофеста началась! Не упусти!</a>
+            </div>
+
+        </div>
+        </section>
+
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile9.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>onliner_official</a1>
+            <a2>25.02.2018</a2>
+            <a3>20:31</a3>
+
+            <img src="post9.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#onliner #sales</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>Скидки в магазине Marc O'Polo! Не забудь заглянуть!</a>
+            </div>
+
+        </div>
+        </section>
+
+
+
+        <section>
+        <div class="post">
+
+            <img src="profile10.png" alt="picwall" class="profilePhoto" width="70" height="70">
+            <a1>lepshy_disigner</a1>
+            <a2>25.02.2018</a2>
+            <a3>11:51</a3>
+
+            <img src="post10.png" alt ="picwall" class="photo">
+            <img src="like.png" alt="picwall" class="like">
+
+            <div class="tags">
+                <a>#Tags:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>#design #fashion #nice</a>
+            </div>
+            <div class="tags">
+                <a>Описание:</a>
+            </div>
+
+            <div class="tagsArea">
+                <a>Немного о моде...</a>
+            </div>
+
+        </div>
+        </section>
+
+
+    	<div id="clear"></div>
+
+        </div>
+
     	<div id="footer">
+
     		<div id = "left">
-    			<p></p>
-    			picwall
+    			<p>picwall</p>
     			<p>Последнее изменение:</p>
     			<p>23.02.2018</p>
     		</div>
+
     		<div id = "center">
-    			<p></p>
-    			Copyright
+    			<p>Copyright</p>
     			<p>All rights reserved</p>
     			<p>2018</p>
     		</div>
+
     		<div id = "right">
-    			<p></p>
-    			Плащинскй Егор
+    			<p>Плащинскй Егор</p>
     			<p>2 курс, 7 группа</p>
     			<p>plashchinskiy@mail.ru</p>
     		</div>
-    	</div>
 
+    	</div>
     </div>
 </body>
 </html>
