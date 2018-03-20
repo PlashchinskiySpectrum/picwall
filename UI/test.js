@@ -29,12 +29,14 @@ console.log(workingModule.getPhotoPost('15'));
 console.log("Get 25th photopost:    (doesn't exist)");
 console.log(workingModule.getPhotoPost('25'));
 
+
 console.log("Validation test. Valid post: ");
 const valid = {
     id: "33",
     description: "Trying to feed up my demons.",
     createdAt: new Date("2018-02-02T13:27:19"),
     author: "author",
+    logo: "profile1.png",
     photoLink: "http://ont.by/webroot/delivery/files/news/2018/02/22/Dom.jpg",
     hashTags: ["concert", "gig", "spherespectrum", "guitarist"],
 };
