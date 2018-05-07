@@ -188,7 +188,7 @@ const Dom = (function () {
             }
 
             if (changes.hashTags !== undefined) {
-                let hashTags = post.childNodes[8];
+                let hashTags = post.childNodes[7];
                 let hashTagsText = hashTags.childNodes[0];
                 hashTagsText.textContent = "";
                 for (let i = 0; i < changes.hashTags.length; i++) {
@@ -205,7 +205,7 @@ const Dom = (function () {
     }
 
     function showAll (photoPosts) {
-        for(let i = 0; i<photoPosts.length; i++) {
+        for(let i = 0; i < photoPosts.length; i++) {
             posts.appendChild(createPost(photoPosts[i]));
         }
     }
