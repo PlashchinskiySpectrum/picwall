@@ -47,6 +47,7 @@ let nonValid = {
     description: "Trying to feed up my demons.",
     createdAt: new Date("2018-02-02T13:27:19"),
     author: "author",
+    logo: "profile1.png",
     photoLink: "http://ont.by/webroot/delivery/files/news/2018/02/22/Dom.jpg",
     hashTags: ["concert", "gig", "spherespectrum", "guitarist"],
 };
@@ -57,15 +58,17 @@ const niceToAdd = {
     description: "Trying to feed up my demons.",
     createdAt: new Date("2018-02-12T13:27:19"),
     author: "author",
+    logo: "profile1.png",
     photoLink: "http://ont.by/webroot/delivery/files/news/2018/02/22/Dom.jpg",
     hashTags: ["concert", "gig", "spherespectrum", "guitarist"],
 };
 console.log(workingModule.addPhotoPost(niceToAdd));
 console.log("Add invalid photopost: (createAt is not Date) ");
-const anotherInvalid = {
+const anotherValid = {
     id: "579",
     description: "Trying to feed up my demons.",
-    createdAt: "Today",
+    createdAt: new Date("2018-02-12T13:27:19"),
+    logo: "profile.png",
     author: "plashchinskiy.spectrum",
     photoLink: "http://ont.by/webroot/delivery/files/news/2018/02/22/Dom.jpg",
     hashTags: ["demons", "blood"],

@@ -1,3 +1,4 @@
+
 "use strict";
 
 let workingModule = (function () {
@@ -9,15 +10,162 @@ let workingModule = (function () {
         photoPosts.sort(compareDate);
         let count = 0;
 
-        if (filterConfig === undefined) {
+        switch (filterConfig){                                          //инструкция для filterConfig
+            case undefined:                                                 //если filterConfig не определён
+                for (let i = skip; i < top + skip; i++) {
+                    if (i > photoPosts.length - 1)
+                        return Array;
+                    Array.push(photoPosts[i]);
+                }
+                break;
+            default:                                                    //если filterConfig определён
+                switch(filterConfig.author){                                //инструкция для filterConfig.author
+                    case undefined:                                             //если filterConfig.author не определён
+                        switch(filterConfig.up){                                    //инструкция для filterConfig.up
+                            case undefined:                                             //если filterConfig.up не определён
+                                switch(filterConfig.bottom){                                //инструкция для filterConfig.bottom
+                                    case undefined:                                             //если filterConfig.bottom не определён
+                                        switch(filterConfig.hashTags){                              //инструкция для filterConfig.hashTags
+                                            case undefined:                                             //если filterConfig.hashTags не определён
+                                                for (let i = skip; i < top + skip; i++) {                   //если все поля не определены
+                                                    if (i > photoPosts.length - 1) {
+                                                        if (Array.length === 0)
+                                                            return null;
+                                                        return Array;
+                                                    }
+                                                    Array.push(photoPosts[i]);
+                                                }
+                                                break;
+                                            default:                                                        //если все поля, кроме hashTags, не определены
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(check(i, filterConfig.hashTags)) {
+                                                        count++;
+                                                    if(count > skip)
+                                                        Array.push(photoPosts[i]);
+                                                    if(Array.length === top)
+                                                        return Array;
+                                                    }
+                                                }
+                                                break;
+                                        }
+
+                                }
+                            default:                                                //если filterConfig.up определён
+                                switch(filterConfig.bottom){                            //инструкция для filterConfig.bottom
+                                    case undefined:                                         //если filterConfig.bottom не определён
+                                        break;                                                  //выходим
+                                    default:                                                //если filterConfig.bottom определён
+                                        switch(filterConfig.hashTags){                          //инструкция для filterConfig.hashTags
+                                            case undefined:                                         //если filterConfig.hashTags не определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if((photoPosts[i].createdAt).getTime() <= (filterConfig.up).getTime()
+                                                     && (photoPosts[i].createdAt).getTime() >= (filterConfig.bottom).getTime()) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                            default:                                                //если filterConfig.hashTags определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(photoPosts[i].createdAt.getTime() < filterConfig.up.getTime() &&
+                                                    photoPosts[i].createdAt.getTime() > filterConfig.bottom.getTime() &&
+                                                    check(i, filterConfig.hashTags)) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                        }
+                                }
+                        }
+                    default:                                //если filterConfig.author определён
+                        switch(filterConfig.up){                //иструкция для filterConfig.up
+                            case undefined:                         //если flterConfig.up не определён
+                                switch(filterConfig.bottom){            //инструкция для filterConfig.bottom
+                                    case undefined:                         //если filterConfig.bottom не определён
+                                        switch(filterConfig.hashTags){          //инструкци для filterConfig.hashTags
+                                            case undefined:                         //если filterConfig.hashTags не определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(photoPosts[i].author === filterConfig.author) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                            default:                                //если filterConfig.hashTags определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(photoPosts[i].author === filterConfig.author && check(i, filterConfig.hashTags)) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                        }
+                                }
+                            default:                                //если filterConfig.up определён
+                                switch(filterConfig.bottom){            //инструкция для filterConfig.bottom
+                                    case undefined:                         //если filterConfig.bottom не определён
+                                        switch(filterConfig.hashTags){          //инструкция для filterConfig.hashTags
+                                            case undefined:                         //если filterConfig.hashTags не определён
+                                                break;
+                                        }
+                                    default:                            //если filterConfig.bottom определён
+                                        switch(filterConfig.hashTags){      //инструкция для filterConfig.hashTags
+                                            case undefined:                     //если filterConfig.hashTags не определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(photoPosts[i].author === filterConfig.author &&
+                                                    photoPosts[i].createdAt.getTime() < filterConfig.up.getTime() &&
+                                                    photoPosts[i].createdAt.getTime() > filterConfig.bottom.getTime()) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                            default:                            //если filterConfig.hashTags определён
+                                                for(let i = 0; i < photoPosts.length; i++){
+                                                    if(photoPosts[i].author === filterConfig.author &&
+                                                    (photoPosts[i].createdAt).getTime() < (filterConfig.up).getTime() &&
+                                                    (photoPosts[i].createdAt).getTime() > (filterConfig.bottom).getTime()  &&
+                                                    check(i, filterConfig.hashTags)) {
+                                                        count++;
+                                                        if(count > skip)
+                                                            Array.push(photoPosts[i]);
+                                                        if(Array.length === top)
+                                                            return Array;
+                                                    }
+                                                }
+                                                break;
+                                        }
+                                }
+                        }
+                }
+        }
+    return Array;
+}
+        /*if (filterConfig === undefined) {
             for (let i = skip; i < top + skip; i++) {
                 if (i > photoPosts.length - 1) {
                     return Array;
                 }
                 Array.push(photoPosts[i]);
             }
-        }
-        else {
+        }*/
+        /*else {
             if(filterConfig.author !== undefined &&
              filterConfig.up !== undefined &&
               filterConfig.bottom !== undefined &&
@@ -34,9 +182,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author === undefined &&
+            /*if(filterConfig.author === undefined &&
              filterConfig.up !== undefined &&
               filterConfig.bottom !== undefined &&
                filterConfig.hashTags !== undefined){
@@ -51,9 +199,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author !== undefined &&
+            /*if(filterConfig.author !== undefined &&
              filterConfig.up === undefined &&
               filterConfig.bottom === undefined &&
                filterConfig.hashTags !== undefined){
@@ -66,9 +214,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author !== undefined &&
+            /*if(filterConfig.author !== undefined &&
              filterConfig.up !== undefined &&
               filterConfig.bottom !== undefined &&
                filterConfig.hashTags === undefined){
@@ -83,9 +231,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author === undefined &&
+            /*if(filterConfig.author === undefined &&
              filterConfig.up === undefined &&
               filterConfig.bottom === undefined &&
                filterConfig.hashTags !== undefined){
@@ -98,9 +246,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author !== undefined &&
+            /*if(filterConfig.author !== undefined &&
              filterConfig.up === undefined &&
               filterConfig.bottom === undefined &&
                filterConfig.hashTags === undefined){
@@ -113,9 +261,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author === undefined &&
+            /*if(filterConfig.author === undefined &&
              filterConfig.up !== undefined &&
               filterConfig.bottom !== undefined &&
                filterConfig.hashTags === undefined){
@@ -129,9 +277,9 @@ let workingModule = (function () {
                             return Array;
                     }
                 }
-            }
+            }*/
 
-            if(filterConfig.author === undefined &&
+            /*if(filterConfig.author === undefined &&
              filterConfig.up === undefined &&
               filterConfig.bottom === undefined &&
                filterConfig.hashTags === undefined){
@@ -143,10 +291,10 @@ let workingModule = (function () {
                     }
                     Array.push(photoPosts[i]);
                 }
-            }
-        }
+            }*/
+/*        }
         return Array;
-    }
+    }*/
     
     function check(i, tag) {
         for(let j = 0; j < (photoPosts[i].hashTags).length; j++)
